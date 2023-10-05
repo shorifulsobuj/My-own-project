@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <!-- 1. Input field -> input task 
+    2. Task Add, Task Edit, Task Remove -->
+
+  <body>
+    <header class="one-input">
+        <a href="http://www.thismanslife.co.uk" target="_blank">TO DO LIST APP</a>
+      <!-- <h2 class="text" id="text">TO DO LIST APP</h2> -->
+      <form id="task-input-form">
+        <input
+          type="text"
+          placeholder="Write your first task..."
+          id="new-task-input"
+        />
+        <input type="submit" value="Add Task" id="task-submit" />
+      </form>
+    </header>
+
+    <main class="tasks">
+      <section>
+        <h2>Tasks</h2>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

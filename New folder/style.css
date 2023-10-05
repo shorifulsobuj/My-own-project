@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Young+Serif&display=swap");
+
+* {
+  background-color: #CD5C089;
+  font-family: "Young Serif", serif;
+}
+#text {
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  color: #867070;
+}
+
+.text {
+  font-size: 3rem;
+  color: #132043;
+}
+.content input {
+  border: none;
+}
+
+.content {
+  display: flex;
+  border: 1px solid #1f4172;
+  padding: 10px;
+  max-width: 300px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.one-input {
+  text-align: center;
+  background-color: white;
+}
+
+/* ///////////////////// */
+
+@keyframes tipsy {
+  0 {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  background-color: #7474a1;
+}
+
+a {
+  color: #fffbf1;
+  text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+  font-size: 80px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -3px;
+  margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+a:before,
+a:after {
+  content: "";
+  padding: 0.9em 0.4em;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  top: 50%;
+  display: block;
+  border: 15px solid #8ad94a;
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  animation: 10s infinite alternate ease-in-out tipsy;
+}
+
+a:before {
+  border-color: #8ad94a #8ad94a rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+a:after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d9524a #d9524a;
+  box-shadow: 25px 25px 25px rgba(46, 46, 49, 0.8);
+}

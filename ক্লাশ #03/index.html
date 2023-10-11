@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If Else</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <section class="main">
+    <div class="wrap">
+
+
+
+
+      <div class="form container">
+
+
+
+        <h2>গ্রেডিং সিস্টেম</h2>
+
+        <div class="fildset">
+          <span>বাংলা বিষয়ের প্রাপ্ত নাম্বার: </span><br>
+          <input placeholder="Input Number Here" type="number" name="bangla" id="bangla">
+        </div>
+
+        <div class="fildset">
+          <span>ইংরেজি বিষয়ের প্রাপ্ত নাম্বার: </span><br>
+          <input placeholder="Input Number Here" type="number" name="english" id="english">
+        </div>
+
+        <div class="fildset">
+          <span>গণিত বিষয়ের প্রাপ্ত নাম্বার: </span><br>
+          <input placeholder="Input Number Here" type="number" name="math" id="math">
+
+        </div>
+        <input id="button" type="submit" value="Check Result" onclick="greding_system(event)">
+
+
+        <br>
+
+        <!-- <br><br><button id="checkresult" >Check</button> -->
+
+
+
+      </div>
+
+      <div class="form container">
+        <h2>Result</h2>
+
+        <span>বাংলা: </span> <span id="banglaresult"></span> <span id="BanglapassFail"></span> <br>
+        <span>ইংরেজি: </span> <span id="englishresult"></span> <span id="EnglishPassFaill"></span><br>
+        <span>গণিত: </span> <span id="mathresult"></span> <span id="MathPassFail"></span>
+        <hr>
+        <span>প্রাপ্ত নম্বরের গড়: </span> <span id="avarageresult"></span> <br>
+        <span>সি জি পি এ: </span> <span id="cgpa"></span> <br>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+
+
+  <script>
+    function greding_system() {
+      //event.preventDefault();
+      var banglaMarks = parseInt(document.getElementById("bangla").value);
+      var englishMarks = parseInt(document.getElementById("english").value);
+      var mathMarks = parseInt(document.getElementById("math").value);
+      var totalMarks = banglaMarks + englishMarks + mathMarks;
+      var avarageMarks = totalMarks / 3;
+
+      document.getElementById("banglaresult").innerHTML = banglaMarks;
+      document.getElementById("englishresult").innerHTML = englishMarks;
+      document.getElementById("mathresult").innerHTML = mathMarks;
+      document.getElementById("avarageresult").innerHTML = avarageMarks;
+
+
+      if (avarageMarks >= 80 && avarageMarks <= 100) {
+        document.getElementById("cgpa").innerHTML = "You got A+";
+      } else if (avarageMarks >= 70 && avarageMarks < 80) {
+        document.getElementById("cgpa").innerHTML = "You got A";
+      } else if (avarageMarks >= 60 && avarageMarks < 70) {
+        document.getElementById("cgpa").innerHTML = "You got A-";
+      } else if (avarageMarks >= 50 && avarageMarks < 60) {
+        document.getElementById("cgpa").innerHTML = "You got B+";
+      } else if (avarageMarks >= 40 && avarageMarks < 50) {
+        document.getElementById("cgpa").innerHTML = "You got B-";
+      } else if (avarageMarks >= 33 && avarageMarks < 40) {
+        document.getElementById("cgpa").innerHTML = "You got C";
+      }
+      // else if (avarageMarks < 33) {
+      //     document.getElementById("cgpa").innerHTML = "You got F";
+      // }
+
+      if (banglaMarks < 33) {
+        document.getElementById("BanglapassFail").innerHTML = "<span style='color:red;'>you failed in bangla</span>";
+        document.getElementById("cgpa").innerHTML = "You got F";
+      }
+      // else {
+      //     document.getElementById("BanglapassFail").innerHTML = "";
+      //     document.getElementById("cgpa").innerHTML = "You got F";
+      // }
+
+      if (englishMarks < 33) {
+        document.getElementById("EnglishPassFaill").innerHTML = "<span style='color:red;'>you failed in English</span>";
+        document.getElementById("cgpa").innerHTML = "You got F";
+
+      }
+      // else {
+      //     document.getElementById("EnglishPassFaill").innerHTML = "";
+      //     document.getElementById("cgpa").innerHTML = "You got F";
+      // }
+
+      if (mathMarks < 33) {
+        document.getElementById("MathPassFail").innerHTML = "<span style='color:red;'>you failed in Math</span>";
+        document.getElementById("cgpa").innerHTML = "You got F";
+
+      }
+      // else {
+      //     document.getElementById("MathPassFail").innerHTML = "";
+      //     document.getElementById("cgpa").innerHTML = "You got F";
+      // }
+
+      // if (avarageMarks < 33) {
+      //     document.getElementById("cgpa").innerHTML = "<span style='color:red;'>you failed</span>";
+      // }
+
+
+      // if(avarageMarks >= 80 && avarageMarks  <= 100  ){
+      //     document.getElementById("cgpa").innerHTML="You got A+";
+      // }
+      // else   if (avarageMarks >= 70 && avarageMarks  < 80  ){
+      //     document.getElementById("cgpa").innerHTML="You got A";
+      // }
+      // else   if (avarageMarks >= 60 && avarageMarks  < 70  ){
+      //     document.getElementById("cgpa").innerHTML="You got A-";
+      // }
+      // else   if (avarageMarks >= 50 && avarageMarks  < 60  ){
+      //     document.getElementById("cgpa").innerHTML="You got B+";
+      // }
+      // else   if (avarageMarks >= 40 && avarageMarks  < 50  ){
+      //     document.getElementById("cgpa").innerHTML="You got B-";
+      // }
+      // else   if (avarageMarks >= 33 && avarageMarks  < 40  ){
+      //     document.getElementById("cgpa").innerHTML="You got C";
+      // }
+      // else   if ( avarageMarks  < 33  ){
+      //     document.getElementById("cgpa").innerHTML="You got F";
+      // }
+
+      // if(banglaMarks  <33  ){
+      //     document.getElementById("BanglapassFail").innerHTML="<span style='color:red;'>you failed in bangla</span>";
+      // }
+      //  if( englishMarks  <33  ){
+      //     document.getElementById("EnglishPassFaill").innerHTML="<span style='color:red;'>you failed in English</span>";
+      // }
+      //  if( mathMarks  <33  ){
+      //     document.getElementById("MathPassFail").innerHTML="<span style='color:red;'>you failed in Math</span>";
+      // }
+      //  if( avarageMarks <33  ){
+      //     document.getElementById("cgpa").innerHTML="<span style='color:red;'>you failed </span>";
+      // }
+
+      // else{
+      //     document.getElementById("cgpa").innerHTML="<span style='color:red;'>Input a Valid Number</span>";
+
+      // }
+    }
+
+  </script>
+</body>
+
+</html>

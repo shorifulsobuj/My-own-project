@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Tiro Bangla", serif;
+}
+
+.main {
+  background-color: #303432;
+  min-height: 100vh;
+}
+
+.main .wrap {
+  max-width: 1000px;
+  margin: auto;
+  gap: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrap > * {
+  flex-basis: 100%;
+  background-color: #963eee;
+  padding: 40px;
+  margin-top: 60px;
+}
+
+.main .wrap .form {
+}
+
+.main .wrap .form .fildset {
+  margin-bottom: 15px;
+  border: 1px solid #48030322;
+  padding: 10px;
+}
+
+.fildset span {
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  padding-bottom: 6px;
+  color: #f6ff00;
+  border: none;
+  outline: none;
+}
+
+.fildset input {
+  width: 95%;
+  padding: 10px;
+  background-color: #447fba;
+  border: none;
+  color: #fff;
+}
+
+input::placeholder {
+  color: rgba(0, 253, 67, 0.946);
+  font-style: italic;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.main .wrap .form {
+  min-height: 200px;
+  padding: 20px;
+  color: #f7f7f7;
+}
+
+.form span {
+  letter-spacing: 2px;
+}
+
+input#button {
+  background: #1ce7e0;
+  padding: 15px 40px;
+  border: 2px soli black;
+  border-radius: 5px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: 0.3s;
+}
+
+input#button:hover {
+  cursor: pointer;
+  background-color: #5e43b6;
+  transform: scale(0.95);
+}
+
+.main .wrap .output {
+}
+
+@media (max-width: 600px) {
+  .main .wrap {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .wrap > * {
+    flex-basis: 100%;
+    background-color: #fafafa;
+    padding: 40px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}

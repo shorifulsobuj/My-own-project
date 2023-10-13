@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS Variables */
+
+:root {
+  --heading-color: #21243d;
+  --accent-color: #878cff;
+  --text-color: #535353;
+  --btn-color: #383838;
+  --primary-font: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+/* Header CSS */
+header {
+  padding-top: 43px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--btn-color);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0px;
+}
+
+.logo h2 {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+/* Button */
+
+.black-btn {
+  padding: 10px 31px;
+  background-color: var(--btn-color);
+  color: white;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: white;
+  display: inline-block;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-link {
+  color: var(--accent-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-link:hover,
+.black-btn:hover {
+  background-color: var(--heading-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Hero Section */
+
+.hero {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 116px 0;
+}
+
+.hero-wrapper {
+  text-align: center;
+  max-width: 505px;
+}
+
+.hero-heading {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.hero-heading span {
+  color: var(--accent-color);
+}
+
+.hero p {
+  margin: 46px 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: var(--text-color);
+}
+
+/* About Section */
+
+.about {
+  background: #fcfcfc;
+  padding: 100px 0;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.about-wrapper > * {
+  flex-basis: 100%;
+}
+
+.about-wrapper img {
+  max-width: 360px;
+  max-height: 360px;
+}
+
+.about-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+}
+
+.about-content h2 span {
+  color: var(--accent-color);
+}
+
+#sobuj {
+  color: #299c57;
+  font-size: 44px;
+}
+
+#sobuj:hover {
+  color: rgb(163, 21, 21);
+  font-size: 2.9rem;
+  transition: 0.4s ease-in-out;
+}
+
+.about-content h3 {
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+}
+
+.about-content p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: justified;
+  color: var(--text-color);
+  margin: 27px 0;
+}
+
+/* Work Section */
+
+.work {
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.work-heading h2 span {
+  color: var(--accent-color);
+}
+
+.work-heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.work-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work-showcase h4 {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+/* Insights Section */
+
+.insights {
+  background-color: #fcfcfc;
+  justify-items: space-around;
+}
+
+.insights-heading span {
+  color: var(--accent-color);
+}
+
+.insights-heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.insights-wrapper {
+  width: 1440px;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  flex-basis: 100%;
+}
+
+/* insights-showcase-tow */
+
+.insights-showcase-one {
+  box-sizing: border-box;
+  width: 491px;
+  height: 369px;
+  left: 138px;
+  top: 2221px;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+}
+
+.insights-showcase-one h4 {
+  width: 112px;
+  height: 24px;
+  left: calc(50% - 112px / 2 - 416px);
+  top: 2258px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+.insights-showcase-one h3 {
+  position: absolute;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.insights-showcase-one p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: justified;
+}
+
+/* insights-showcase-tow */
+
+.insights-showcase-tow {
+  box-sizing: border-box;
+  width: 491px;
+  height: 369px;
+  left: 138px;
+  top: 2221px;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  justify-content: space-between;
+}
+
+.insights-showcase-tow h4 {
+  position: absolute;
+  width: 112px;
+  height: 24px;
+  left: calc(50% - 112px / 2 + 101px);
+  top: 2258px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+.insights-showcase-tow h3 {
+  position: absolute;
+  width: 432px;
+  height: 78px;
+  left: 685px;
+  top: 2294px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+.insights-showcase-tow p {
+  position: absolute;
+  width: 432.27px;
+  height: 96px;
+  left: 685px;
+  top: 2399px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
+}
+
+.
+/* Footer Section */
+
+footer {
+  background-color: var(--heading-color);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+}

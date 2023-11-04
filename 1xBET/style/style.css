@@ -1,0 +1,300 @@
+/* Variables */
+:root {  --mainColor: #0c314d;  --hoverColor: #1a5684;
+  --white: #fff;  --primaryColor: #668a28;}
+/* Global Rules */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Roboto" sans-serif;
+}
+html{font-size: 62.5%;}
+body{
+  background-color: var(--mainColor);
+  color: var(--white);
+}
+
+ul{list-style: none;}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.container{
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container{
+  padding-right: 5px;
+}
+/* Mob screen */
+@media (min-width: 576px) {
+  .container{width: 540px;}
+}
+/* Small Screen */
+@media (min-width: 768px) {
+  .container{width: 720px;}
+}
+/* Medium Screen */
+@media (min-width: 992px) {
+  .container{width: 960px;}
+}
+ 
+/* Large Screen */
+@media (min-width: 1200px) {
+  .container {width: 1140px;  }
+}
+/* Very Large Screen */
+@media (min-width: 1400px) {
+  .container{width: 1320px;}
+}
+
+/* header style */
+
+.top-nev .container{
+  justify-content: space-between;
+  padding: 0;
+  height: 6rem;
+  background-color: var(--white);
+  border-bottom: 2px solid var(--white);
+  position: relative;
+}
+
+.top-nev .burger{
+  display: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .top-nev .burger{
+    display: block;
+    color: var(--mainColor);
+  }
+}
+
+.top-nev .left-nav {
+  width: 40%;
+  background-color: #174b73;
+  box-shadow: inset 0 50px 25px -15px #216ca6;
+  line-height: 1rem;
+  height: 100%;
+}
+
+@media (max-width: 991px) {.top-nev .left-nav { width: 50%; } }
+
+.top-nev .left-nav div{
+ width: 20%;
+ height: inherit;
+ border: 1px solid #ccc;
+ justify-content: space-evenly;
+ font-size: 1.2rem;
+ cursor: pointer;
+ transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 767px) {
+
+  .top-nev .left-nav{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    height: 25rem;
+    top: 70%;
+    left: 0;
+    z-index: 4;
+  }
+  
+  .top-nev .burger:hover ~ .left-nav{display: flex;}
+
+  .top-nev .left-nav div{ width: 100%; height: 100%;}
+}
+
+.top-nev .left-nav div:hover{
+  box-shadow: none;
+  background-color: #1a5684;
+}
+
+.top-nev .left-nav > div:last-of-type{
+  flex-direction: column;
+  background-color: var(--primaryColor);
+  box-shadow: inset 0 50px 25px -25px #84b332;
+}
+
+.top-nev .left-nav > div:last-of-type:hover{
+  box-shadow: none;
+  background-color: #93c738;
+}
+
+.top-nev .left-nav > div:nth-child(4){
+  background-color: #0e5d9a;
+  box-shadow: inset 0 50px 25px -25px #388ecc;
+}
+
+.top-nev .left-nav > div:nth-child(4):hover{
+  background-color: #1f72ad;
+  box-shadow: none;
+}
+
+.top-nev .left-nav > div:last-of-type i{max-width: 100%;}
+.top-nev .left-nav div i{font-size: 2rem;}
+
+.top-nev .left-nav .desk-top,
+.top-nev .left-nav .mobile,
+.top-nev .left-nav .telg{position: relative;}
+
+.top-nev .left-nav .bet-app,
+.top-nev .left-nav .smart-phone,
+.top-nev .left-nav .telg-box{
+  position: absolute;
+  top: 7rem;
+  z-index: 1;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: var(--white);
+  overflow: auto;
+  display: none;
+}
+
+
+.top-nev .left-nav .bet-app{
+  min-width: 20rem;
+  height: 11rem;
+  left: 1.6rem;
+
+}
+
+.top-nev .left-nav .bet-app::before,
+.top-nev .left-nav .smart-phone::before,
+.top-nev .left-nav .telg-box::before{
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 1.5rem;
+  border-color: transparent transparent var(--hoverColor) transparent;
+  bottom: -1.5rem;
+  z-index: 2;
+  left: 2rem;
+  display: none;
+}
+
+ .top-nev .left-nav .desk-top:hover .bet-app,
+ .top-nev .left-nav .desk-top:hover .before{display: block;}
+ 
+ .top-nev .left-nav .smart-phone{
+  min-width: 15rem;
+  left: 1.6rem;
+  line-height: 10rem;
+ }
+
+
+@media (max-width: 767px) {
+  
+}
+
+@media (max-width: 767px) {
+  
+}
+
+@media (max-width: 767px) {  
+  
+}
+
+@media (max-width: 767px) {
+ 
+}
+
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 992px) {
+ 
+}
+
+@media (max-width: 992px) {
+}
+
+
+/* landing style */
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+/* slider style */
+
+@media (max-width: 767px) {
+  
+}
+
+/* to navigate */
+
+/* slider animation position */
+
+/* live bets style */
+
+@media (max-width: 575px) {
+  
+}
+
+@media (max-width: 575px) {
+  
+}
+
+@media (max-width: 575px) {
+  
+@media (max-width: 575px) {
+  
+}
+
+/* live bets static style */
+
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 992px) {
+  
+}
+
+/* static row style */
+@media (max-width: 992px) {
+  
+}
+
+/* sports book style */
+@media (max-width: 575px) {
+
+}
+
+@media (max-width: 575px) {
+  
+}
+/* usa static style */
+
+/* footer style */
+@media (max-width: 767px) {
+  
+
+}
+@media (max-width: 575px) {
+  
+@media (max-width: 767px) {
+  
+}
+
+@media (max-width: 767px) {
+ 
+}
